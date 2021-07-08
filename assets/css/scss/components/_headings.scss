@@ -1,0 +1,42 @@
+/*--------------------------------------------------------------
+# Start Main Heading
+--------------------------------------------------------------*/
+
+.main-heading {
+    h2 {
+        color: #1E1E1E;
+        font-family: $semiBold;
+        margin-bottom: 10px;
+    }
+    span {
+        width: 11px;
+        height: 11px;
+        background-color: $mainColor;
+        display: inline-block;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 18px;
+        &:after,
+        &:before {
+            position: absolute;
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $mainColor;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:after {
+            left: -18px;
+        }
+        &::before {
+            right: -18px;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End Main Heading
+--------------------------------------------------------------*/

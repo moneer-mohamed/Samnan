@@ -1,0 +1,126 @@
+/*--------------------------------------------------------------
+# Start navtop
+--------------------------------------------------------------*/
+
+.navtop {
+    padding: 10px 0;
+    overflow: visible;
+    .logo {
+        img {
+            width: 160px;
+        }
+    }
+    .list_menu {
+        font-family: $semiBold;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                display: inline-block;
+                &:not(:last-of-type) {
+                    margin-inline-end: 40px;
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+        .icon {
+            background: $mainColor;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-inline-end: 5px;
+            svg {
+                width: 18px;
+                fill: #fff;
+            }
+        }
+    }
+    .settings {
+        display: flex;
+        justify-content: flex-end;
+        .dropdown {
+            display: inline-block;
+            margin-inline-end: -4px;
+            .dropdown-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #000;
+                i {
+                    margin: 0;
+                }
+                &:after {
+                    display: none;
+                }
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+            .dropdown-menu {
+                padding: 0;
+                border: 0;
+                border-radius: 7px;
+                box-shadow: 0 3px 6px rgb(0 0 0 / 8%);
+                text-align: start;
+                overflow: hidden;
+                .dropdown-item {
+                    border-bottom: 1px solid #F5F5F5;
+                    padding: 8px 15px;
+                    display: flex;
+                    align-items: center;
+                    color: $mainColor;
+                    i {
+                        margin-inline-end: 10px;
+                    }
+                    &:hover,
+                    &:focus {
+                        background-color: $mainColor;
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .settings_item {
+            &:not(:last-of-type) {
+                margin-inline-end: 15px;
+            }
+        }
+        .search_icon {
+            color: #000;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                color: $mainColor;
+            }
+        }
+        .lang {
+            font-weight: 900;
+        }
+    }
+}
+
+@media(max-width:991.98px) {
+    .navtop .list_menu {
+        display: none;
+    }
+}
+
+@media(max-width:575.98px) {
+    .navtop .settings .vision {
+        display: none;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End navtop
+--------------------------------------------------------------*/

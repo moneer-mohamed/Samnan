@@ -1,0 +1,199 @@
+/*--------------------------------------------------------------
+# Start nav-menu
+--------------------------------------------------------------*/
+
+.nav_bar {
+    background-color: $secColor;
+    padding: 10px 0;
+    .nav-list {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                a {
+                    color: #fff;
+                    font-family: $Light;
+                    font-size: 15px;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        right: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: $thirdColor;
+                        transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                    }
+                    &:hover::before {
+                        left: 0;
+                        right: auto;
+                        width: 100%;
+                    }
+                    &.active {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sochial {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .content {
+            display: flex;
+            align-items: center;
+        }
+        .media {
+            margin-inline-end: 25px;
+            li {
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: $thirdColor;
+                    }
+                }
+                &:not(:last-of-type) {
+                    margin-inline-end: 30px;
+                }
+            }
+        }
+        .main-btn {
+            display: flex;
+            align-items: center;
+            padding: 7px 30px;
+            i {
+                margin-inline-end: 10px;
+            }
+        }
+    }
+    .navbar-toggler {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        >div {
+            cursor: pointer;
+        }
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: #fff;
+            transition: 0.3s;
+        }
+        .two {
+            margin: 7px 0;
+            width: 23px;
+            margin-inline-end: 7px;
+        }
+        &.open {
+            .one {
+                transform: rotate( -45deg) translate(-3px, 10px);
+            }
+            .two {
+                opacity: 0;
+            }
+            .three {
+                transform: rotate( 45deg) translate(-4px, -11px);
+            }
+        }
+    }
+    .sidebar {
+        background-size: cover;
+        position: fixed;
+        height: 100%;
+        right: 0;
+        top: 0;
+        width: 250px;
+        background: #fff;
+        z-index: 9999999999;
+        transform: translateX(100%);
+        transition: all .3s;
+        background-position: 36%;
+        opacity: 1;
+        &.opened {
+            transform: translateX(0%);
+            transition: all .3s;
+        }
+        .sid-logo {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 20px;
+            img {
+                width: 175px;
+            }
+        }
+        .btn-req {
+            &.additional {
+                background-color: #225E62;
+                padding: 15px 0;
+                .media {
+                    width: 100%;
+                    justify-content: space-evenly;
+                    li {
+                        display: inline-block;
+                        a {
+                            color: #fff;
+                            &:hover {
+                                color: $thirdColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .side-nav {
+            max-height: 100%;
+            height: calc(100% - 90px);
+            position: relative;
+            z-index: 1;
+            margin-top: 20px;
+            ul li {
+                display: block;
+                position: relative;
+                a {
+                    display: block;
+                    font-size: 16px;
+                    padding: 11px 25px;
+                    position: relative;
+                    color: $secColor;
+                    font-weight: 900;
+                    &:hover {
+                        background: $secColor;
+                        color: #fff;
+                        border: none !important;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1199.98px) {
+    .nav_bar .nav-list ul li a {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:991.98px) {
+    .nav_bar .nav-list {
+        display: none;
+    }
+}
+
+@media(max-width:575.98px) {
+    .nav_bar .sochial .media {
+        display: none;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End nav-menu
+--------------------------------------------------------------*/
