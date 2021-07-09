@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .header {
-    height: calc(100vh - 127.3px);
+    height: calc(100vh - 102px);
     .owl-carousel {
         .owl-item {
             .item {
@@ -11,7 +11,7 @@
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: calc(100vh - 127.3px);
+                height: calc(100vh - 102px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -409,7 +409,7 @@
                 border-radius: 50%;
                 right: -6px;
                 z-index: -1;
-                background-color: rgba($color: #c4ffe6, $alpha: 0.36);
+                background-color: rgb(196 222 255 / 36%);
             }
             svg path {
                 transition: .3s;
