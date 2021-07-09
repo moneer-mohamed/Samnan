@@ -427,7 +427,7 @@ input::placeholder {
   width: 175px;
 }
 .nav_bar .sidebar .btn-req.additional {
-  background-color: #21409A;
+  background-color: #146e99;
   padding: 15px 0;
 }
 .nav_bar .sidebar .btn-req.additional .media {
@@ -463,7 +463,7 @@ input::placeholder {
   font-weight: 900;
 }
 .nav_bar .sidebar .side-nav ul li a:hover {
-  background: #2c3550;
+  background: #146e99;
   color: #fff;
   border: none !important;
   outline: none;

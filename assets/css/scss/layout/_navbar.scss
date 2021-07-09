@@ -143,7 +143,7 @@
         }
         .btn-req {
             &.additional {
-                background-color: #21409A;
+                background-color: $mainColor;
                 padding: 15px 0;
                 .media {
                     width: 100%;
@@ -177,7 +177,7 @@
                     color: $secColor;
                     font-weight: 900;
                     &:hover {
-                        background: $secColor;
+                        background: $mainColor;
                         color: #fff;
                         border: none !important;
                         outline: none;
