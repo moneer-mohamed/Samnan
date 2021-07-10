@@ -41,6 +41,18 @@ $(document).ready(function() {
         }
     });
 
+    /* ===============================  haeder carousel  =============================== */
+    $(".Companies_section .owl-carousel").owlCarousel({
+        autoplay: true,
+        nav: false,
+        dots: true,
+        loop: true,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        items: 1,
+    });
+
+
+
     /* ===============================  Smooth scroll into second section  =============================== */
 
     $('.smoothscroll').on('click', function() {
