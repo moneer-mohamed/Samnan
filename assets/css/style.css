@@ -34,11 +34,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #146e99;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: Bahij_Light, sans-serif;
   position: relative;
@@ -289,7 +284,7 @@ input::placeholder {
   }
   .topbar .topbar__right {
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 /*--------------------------------------------------------------
@@ -299,19 +294,28 @@ input::placeholder {
 # Start nav-menu
 --------------------------------------------------------------*/
 .nav_bar {
-  padding: 10px 0;
+  transition: 0.3s;
+  height: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+.nav_bar .content {
+  padding: 15px 0;
+  transition: 0.3s;
 }
 .nav_bar .logo img {
-  width: 125px;
+  width: 150px;
+  transition: 0.3s;
 }
 .nav_bar .logo .vission {
   width: 50px;
   margin-inline-start: 17px;
+  display: none;
+  transition: 0.3s;
 }
-@media (max-width: 991.98px) {
-  .nav_bar .logo .vission {
-    display: none;
-  }
+.nav_bar .logo .vission.active {
+  display: inline-block;
 }
 .nav_bar .nav-list ul {
   display: flex;
@@ -322,6 +326,7 @@ input::placeholder {
   font-family: "bahij_Light";
   font-size: 15px;
   position: relative;
+  color: #fff;
 }
 .nav_bar .nav-list ul li a::before {
   content: "";
@@ -351,13 +356,16 @@ input::placeholder {
   align-items: center;
 }
 .nav_bar .sochial .content .search_icon {
-  color: #000;
+  color: #fff;
   cursor: pointer;
   transition: 0.3s;
   margin-inline-end: 15px;
 }
 .nav_bar .sochial .content .lang {
   font-weight: 900;
+}
+.nav_bar .sochial .content .lang a {
+  color: #fff;
 }
 .nav_bar .sochial .media {
   margin-inline-end: 25px;
@@ -383,6 +391,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 0.25rem 0;
 }
 .nav_bar .navbar-toggler > div {
   cursor: pointer;
@@ -391,7 +400,7 @@ input::placeholder {
   display: block;
   width: 30px;
   height: 3px;
-  background: #146e99;
+  background: #fff;
   transition: 0.3s;
 }
 .nav_bar .navbar-toggler .two {
@@ -408,7 +417,8 @@ input::placeholder {
 .nav_bar .navbar-toggler.open .three {
   transform: rotate(45deg) translate(-4px, -11px);
 }
-.nav_bar .sidebar {
+
+.sidebar {
   background-size: cover;
   position: fixed;
   height: 100%;
@@ -422,48 +432,48 @@ input::placeholder {
   background-position: 36%;
   opacity: 1;
 }
-.nav_bar .sidebar.opened {
+.sidebar.opened {
   transform: translateX(0%);
   transition: all 0.3s;
 }
-.nav_bar .sidebar .sid-logo {
+.sidebar .sid-logo {
   position: relative;
   z-index: 3;
   text-align: center;
   padding: 20px;
 }
-.nav_bar .sidebar .sid-logo img {
+.sidebar .sid-logo img {
   width: 175px;
 }
-.nav_bar .sidebar .btn-req.additional {
+.sidebar .btn-req.additional {
   background-color: #146e99;
   padding: 15px 0;
 }
-.nav_bar .sidebar .btn-req.additional .media {
+.sidebar .btn-req.additional .media {
   width: 100%;
   justify-content: space-evenly;
 }
-.nav_bar .sidebar .btn-req.additional .media li {
+.sidebar .btn-req.additional .media li {
   display: inline-block;
 }
-.nav_bar .sidebar .btn-req.additional .media li a {
+.sidebar .btn-req.additional .media li a {
   color: #fff;
 }
-.nav_bar .sidebar .btn-req.additional .media li a:hover {
+.sidebar .btn-req.additional .media li a:hover {
   color: #54b5e2;
 }
-.nav_bar .sidebar .side-nav {
+.sidebar .side-nav {
   max-height: 100%;
   height: calc(100% - 90px);
   position: relative;
   z-index: 1;
   margin-top: 20px;
 }
-.nav_bar .sidebar .side-nav ul li {
+.sidebar .side-nav ul li {
   display: block;
   position: relative;
 }
-.nav_bar .sidebar .side-nav ul li a {
+.sidebar .side-nav ul li a {
   display: block;
   font-size: 16px;
   padding: 11px 25px;
@@ -471,11 +481,38 @@ input::placeholder {
   color: #2c3550;
   font-weight: 900;
 }
-.nav_bar .sidebar .side-nav ul li a:hover {
+.sidebar .side-nav ul li a:hover {
   background: #146e99;
   color: #fff;
   border: none !important;
   outline: none;
+}
+
+.sticky_nav > .content {
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+.sticky_nav > .content .logo img {
+  width: 125px;
+}
+.sticky_nav > .content .logo .vission {
+  width: 50px;
+}
+.sticky_nav > .content .navbar-toggler span {
+  background: #146e99;
+}
+.sticky_nav > .content .nav-list ul li a {
+  color: #212121;
+}
+.sticky_nav > .content .lang a {
+  color: #212121 !important;
+}
+.sticky_nav > .content .search_icon {
+  color: #212121 !important;
+}
+.sticky_nav > .content a:hover {
+  color: #146e99 !important;
 }
 
 @media (max-width: 1199.98px) {
@@ -496,6 +533,10 @@ input::placeholder {
   .nav_bar .sochial .media {
     display: none;
   }
+
+  .nav_bar .logo img {
+    width: 110px;
+  }
 }
 /*--------------------------------------------------------------
 # End nav-menu
@@ -510,14 +551,15 @@ input::placeholder {
 # Start Hero Section
 --------------------------------------------------------------*/
 .header {
-  height: calc(100vh - 102px);
+  height: calc(100vh);
+  overflow: visible;
 }
 .header .owl-carousel .owl-item .item {
   position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: calc(100vh - 102px);
+  height: calc(100vh);
   display: flex;
   align-items: center;
   justify-content: center;

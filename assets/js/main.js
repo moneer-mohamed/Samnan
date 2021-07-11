@@ -6,9 +6,9 @@ $(document).ready(function() {
     /* ===============================  click on navbar toggler  =============================== */
 
     $('.navbar-toggler').on('click', function() {
-        $(this).addClass('open');
-        $('.sidebar').addClass("opened");
-        $('.overlay_gen').fadeIn().on('click', function() {
+        $(this).toggleClass('open');
+        $('.sidebar').toggleClass("opened");
+        $('.overlay_gen').fadeToggle().on('click', function() {
             $(this).fadeOut();
             $('.navbar-toggler').removeClass('open')
             $('.sidebar').removeClass("opened");
@@ -23,6 +23,12 @@ $(document).ready(function() {
         loop: true,
         navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
         items: 1,
+        responsive: {
+            0: { nav: false },
+            576: { nav: false },
+            768: { nav: true },
+            1200: {}
+        }
     });
 
     /* ===============================  clients section  =============================== */
@@ -116,7 +122,28 @@ $(document).ready(function() {
 
             $('.up').removeClass('fade')
         }
+
+        if ($(window).scrollTop() >= 137) {
+
+            $('.nav_bar').addClass('sticky_nav')
+
+        } else {
+
+            $('.nav_bar').removeClass('sticky_nav')
+
+        }
+
+        if ($(window).scrollTop() >= 170) {
+
+            $('.sticky_nav .vission').addClass('active')
+
+        } else {
+
+            $('.sticky_nav .vission').removeClass('active')
+
+        }
     })
+
 
     $('.up').on('click', function() {
 
@@ -124,6 +151,26 @@ $(document).ready(function() {
             scrollTop: 0
         }, 1000, 'easeInOutExpo')
     })
+
+    if ($(window).scrollTop() >= 137) {
+
+        $('.nav_bar').addClass('sticky_nav')
+
+    } else {
+
+        $('.nav_bar').removeClass('sticky_nav')
+
+    }
+
+    if ($(window).scrollTop() >= 170) {
+
+        $('.sticky_nav .vission').addClass('active')
+
+    } else {
+
+        $('.sticky_nav .vission').removeClass('active')
+
+    }
 
 
     /* ===============================  dropdown  =============================== */

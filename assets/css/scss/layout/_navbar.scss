@@ -3,17 +3,27 @@
 --------------------------------------------------------------*/
 
 .nav_bar {
-    // background-color: $secColor;
-    padding: 10px 0;
+    transition: .3s;
+    height: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    .content {
+        padding: 15px 0;
+        transition: .3s;
+    }
     .logo {
         img {
-            width: 125px;
+            width: 150px;
+            transition: .3s;
         }
         .vission {
             width: 50px;
             margin-inline-start: 17px;
-            @media(max-width: 991.98px) {
-                display: none;
+            display: none;
+            transition: .3s;
+            &.active {
+                display: inline-block;
             }
         }
     }
@@ -27,6 +37,7 @@
                     font-family: $Light;
                     font-size: 15px;
                     position: relative;
+                    color: #fff;
                     &::before {
                         content: '';
                         position: absolute;
@@ -59,13 +70,16 @@
             display: flex;
             align-items: center;
             .search_icon {
-                color: #000;
+                color: #fff;
                 cursor: pointer;
                 transition: 0.3s;
                 margin-inline-end: 15px;
             }
             .lang {
                 font-weight: 900;
+                a {
+                    color: #fff;
+                }
             }
         }
         .media {
@@ -95,6 +109,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        padding: 0.25rem 0;
         >div {
             cursor: pointer;
         }
@@ -102,7 +117,7 @@
             display: block;
             width: 30px;
             height: 3px;
-            background: $mainColor;
+            background: #fff;
             transition: 0.3s;
         }
         .two {
@@ -122,75 +137,107 @@
             }
         }
     }
-    .sidebar {
-        background-size: cover;
-        position: fixed;
-        height: 100%;
-        right: 0;
-        top: 0;
-        width: 250px;
-        background: #fff;
-        z-index: 9999999999;
-        transform: translateX(100%);
+}
+
+.sidebar {
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 250px;
+    background: #fff;
+    z-index: 9999999999;
+    transform: translateX(100%);
+    transition: all .3s;
+    background-position: 36%;
+    opacity: 1;
+    &.opened {
+        transform: translateX(0%);
         transition: all .3s;
-        background-position: 36%;
-        opacity: 1;
-        &.opened {
-            transform: translateX(0%);
-            transition: all .3s;
+    }
+    .sid-logo {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        padding: 20px;
+        img {
+            width: 175px;
         }
-        .sid-logo {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-            padding: 20px;
-            img {
-                width: 175px;
-            }
-        }
-        .btn-req {
-            &.additional {
-                background-color: $mainColor;
-                padding: 15px 0;
-                .media {
-                    width: 100%;
-                    justify-content: space-evenly;
-                    li {
-                        display: inline-block;
-                        a {
-                            color: #fff;
-                            &:hover {
-                                color: $thirdColor;
-                            }
+    }
+    .btn-req {
+        &.additional {
+            background-color: $mainColor;
+            padding: 15px 0;
+            .media {
+                width: 100%;
+                justify-content: space-evenly;
+                li {
+                    display: inline-block;
+                    a {
+                        color: #fff;
+                        &:hover {
+                            color: $thirdColor;
                         }
                     }
                 }
             }
         }
-        .side-nav {
-            max-height: 100%;
-            height: calc(100% - 90px);
+    }
+    .side-nav {
+        max-height: 100%;
+        height: calc(100% - 90px);
+        position: relative;
+        z-index: 1;
+        margin-top: 20px;
+        ul li {
+            display: block;
             position: relative;
-            z-index: 1;
-            margin-top: 20px;
-            ul li {
+            a {
                 display: block;
+                font-size: 16px;
+                padding: 11px 25px;
                 position: relative;
-                a {
-                    display: block;
-                    font-size: 16px;
-                    padding: 11px 25px;
-                    position: relative;
-                    color: $secColor;
-                    font-weight: 900;
-                    &:hover {
-                        background: $mainColor;
-                        color: #fff;
-                        border: none !important;
-                        outline: none;
-                    }
+                color: $secColor;
+                font-weight: 900;
+                &:hover {
+                    background: $mainColor;
+                    color: #fff;
+                    border: none !important;
+                    outline: none;
                 }
             }
+        }
+    }
+}
+
+.sticky_nav {
+    >.content {
+        background-color: #fff;
+        padding: 10px 0;
+        box-shadow: 0px 6px 20px rgba($color: #000000, $alpha: 0.1);
+        .logo {
+            img {
+                width: 125px;
+            }
+            .vission {
+                width: 50px;
+            }
+        }
+        .navbar-toggler span {
+            background: $mainColor;
+        }
+        .nav-list ul li a {
+            color: #212121;
+        }
+        .lang a {
+            color: #212121 !important;
+        }
+        .search_icon {
+            color: #212121 !important;
+        }
+        a:hover {
+            color: $mainColor !important;
         }
     }
 }
@@ -213,6 +260,9 @@
 @media(max-width:575.98px) {
     .nav_bar .sochial .media {
         display: none;
+    }
+    .nav_bar .logo img {
+        width: 110px;
     }
 }
 
