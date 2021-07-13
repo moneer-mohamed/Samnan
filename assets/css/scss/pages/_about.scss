@@ -1,0 +1,103 @@
+.our_values {
+    padding: 80px 0 50px;
+    .card1 {
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+        padding: 50px 30px;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        background-color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: -32px;
+            left: -32px;
+            background: $mainColor;
+            height: 32px;
+            width: 32px;
+            border-radius: 32px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transition: -webkit-transform 1s ease-out;
+            transition: -webkit-transform 1s ease-out;
+            transition: transform 1s ease-out;
+            transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+        }
+        .wt-icon-box-wraper {
+            position: relative;
+            margin-bottom: 20px;
+            .icon-xl.inline-icon {
+                width: auto;
+                svg {
+                    width: 70px;
+                    height: auto;
+                    fill: $mainColor;
+                }
+            }
+        }
+    }
+    .m-b40 {
+        margin-bottom: 40px;
+    }
+    .card1 .d-icon-box-content p {
+        font-size: 15px;
+        margin: 0;
+    }
+    .card1 .site-text-primary,
+    .card1 .s-title-one,
+    .card1 .d-icon-box-content p,
+    .card1 .icon-xl.inline-icon svg path {
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .icon-xl i {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .d-icon-box-title {
+        margin-bottom: 10px;
+        color: #1a1a1a;
+        h4 {
+            font-size: 24px;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+    .site-button-link:before {
+        position: absolute;
+        content: '';
+        right: -30px;
+        top: 8px;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        width: 20px;
+        height: 2px;
+        background-color: $mainColor;
+    }
+    .card1:hover:before {
+        -webkit-transform: scale(50);
+        transform: scale(50);
+    }
+    .card1:hover .site-text-primary,
+    .card1:hover .s-title-one,
+    .card1:hover .d-icon-box-content p {
+        color: #fff;
+    }
+    .card1:hover .icon-xl.inline-icon svg,
+    .card1:hover .icon-xl.inline-icon svg path {
+        fill: #fff !important;
+    }
+}

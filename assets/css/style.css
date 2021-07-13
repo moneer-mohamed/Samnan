@@ -107,7 +107,6 @@ section {
 }
 
 .display-table {
-  text-align: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -541,12 +540,115 @@ input::placeholder {
 /*--------------------------------------------------------------
 # End nav-menu
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Start Page Header
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# End Page Header
---------------------------------------------------------------*/
+/*Start page header*/
+.page-tittle-contact .display-table {
+  text-align: start;
+}
+.page-tittle-contact .display-table .info p {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.et_pb_bottom_inside_divider {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyMHZ3IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTAgOTAuNzJsMTQwLTI4LjI4IDMxNS41MiAyNC4xNEw3OTYuNDggNjUuOCAxMTQwIDEwNC44OWwxNDAtMTQuMTdWMEgwdjkwLjcyeiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0wIDB2NDcuNDRMMTcwIDBsNjI2LjQ4IDk0Ljg5TDExMTAgODcuMTFsMTcwLTM5LjY3VjBIMHoiLz48L2c+PC9zdmc+);
+  background-size: 200% 20vw;
+  bottom: 0;
+  height: 20vw;
+  z-index: 1;
+  transform: rotateY(180deg) rotateX(180deg);
+  display: block;
+  background-repeat-y: no-repeat;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-bottom: -1px;
+}
+
+.page-tittle {
+  position: relative;
+  height: 480px;
+  background-size: cover;
+  background-image: linear-gradient(42deg, rgba(40, 61, 75, 0.7) 59%, rgba(255, 255, 255, 0.86) 100%), url(../img/page_header_1.jpg) !important;
+  background-position: bottom;
+}
+.page-tittle .overlay {
+  background: #146e99;
+  opacity: 0.7;
+}
+.page-tittle .info h3 {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 35px;
+  margin: 0;
+}
+@media (max-width: 575.98px) {
+  .page-tittle .info h3 {
+    font-size: 25px;
+  }
+}
+.page-tittle .info a {
+  position: relative;
+  color: #C4C4C4;
+  font-size: 35px;
+  font-weight: 600;
+}
+.page-tittle .info a:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: -10px;
+  height: 1px;
+  background: currentColor;
+  width: 0;
+  transition: 0.3s;
+}
+.page-tittle .info a:hover:after {
+  width: 100%;
+}
+@media (max-width: 575.98px) {
+  .page-tittle .info a {
+    font-size: 25px;
+  }
+}
+.page-tittle .info .divider {
+  color: #C4C4C4;
+  margin: 0 16px;
+  font-size: 27px;
+}
+@media (max-width: 575.98px) {
+  .page-tittle .info .divider {
+    font-size: 19px;
+  }
+}
+.page-tittle .info .current {
+  position: relative;
+  color: #C4C4C4;
+  font-size: 35px;
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .page-tittle .info .current {
+    font-size: 25px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-tittle .info {
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-tittle {
+    height: 300px;
+  }
+}
+/*End page header*/
 /*--------------------------------------------------------------
 # Start Hero Section
 --------------------------------------------------------------*/
@@ -1331,6 +1433,110 @@ input::placeholder {
 /*--------------------------------------------------------------
 # End clients section
 --------------------------------------------------------------*/
+.our_values {
+  padding: 80px 0 50px;
+}
+.our_values .card1 {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 50px 30px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.our_values .card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -32px;
+  left: -32px;
+  background: #146e99;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+.our_values .card1 .wt-icon-box-wraper {
+  position: relative;
+  margin-bottom: 20px;
+}
+.our_values .card1 .wt-icon-box-wraper .icon-xl.inline-icon {
+  width: auto;
+}
+.our_values .card1 .wt-icon-box-wraper .icon-xl.inline-icon svg {
+  width: 70px;
+  height: auto;
+  fill: #146e99;
+}
+.our_values .m-b40 {
+  margin-bottom: 40px;
+}
+.our_values .card1 .d-icon-box-content p {
+  font-size: 15px;
+  margin: 0;
+}
+.our_values .card1 .site-text-primary,
+.our_values .card1 .s-title-one,
+.our_values .card1 .d-icon-box-content p,
+.our_values .card1 .icon-xl.inline-icon svg path {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.our_values .icon-xl i {
+  font-size: 80px;
+  line-height: 80px;
+}
+.our_values .d-icon-box-title {
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+.our_values .d-icon-box-title h4 {
+  font-size: 24px;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.our_values .site-button-link:before {
+  position: absolute;
+  content: "";
+  right: -30px;
+  top: 8px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 20px;
+  height: 2px;
+  background-color: #146e99;
+}
+.our_values .card1:hover:before {
+  -webkit-transform: scale(50);
+  transform: scale(50);
+}
+.our_values .card1:hover .site-text-primary,
+.our_values .card1:hover .s-title-one,
+.our_values .card1:hover .d-icon-box-content p {
+  color: #fff;
+}
+.our_values .card1:hover .icon-xl.inline-icon svg,
+.our_values .card1:hover .icon-xl.inline-icon svg path {
+  fill: #fff !important;
+}
+
 /*--------------------------------------------------------------
 # Start footer top
 --------------------------------------------------------------*/

@@ -1,8 +1,110 @@
-/*--------------------------------------------------------------
-# Start Page Header
---------------------------------------------------------------*/
+/*Start page header*/
+
+.page-tittle-contact {
+    .display-table {
+        text-align: start;
+        .info {
+            p {
+                color: #fff;
+                font-size: 20px;
+                margin-top: 10px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.et_pb_bottom_inside_divider {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyMHZ3IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTAgOTAuNzJsMTQwLTI4LjI4IDMxNS41MiAyNC4xNEw3OTYuNDggNjUuOCAxMTQwIDEwNC44OWwxNDAtMTQuMTdWMEgwdjkwLjcyeiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0wIDB2NDcuNDRMMTcwIDBsNjI2LjQ4IDk0Ljg5TDExMTAgODcuMTFsMTcwLTM5LjY3VjBIMHoiLz48L2c+PC9zdmc+);
+    background-size: 200% 20vw;
+    bottom: 0;
+    height: 20vw;
+    z-index: 1;
+    transform: rotateY( 180deg) rotateX( 180deg);
+    display: block;
+    background-repeat-y: no-repeat;
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-bottom: -1px;
+}
+
+.page-tittle {
+    position: relative;
+    height: 480px;
+    background-size: cover;
+    background-image: linear-gradient( 42deg, rgb(40 61 75 / 70%) 59%, rgba(255 255 255 /86%) 100%), url(../img/page_header_1.jpg) !important;
+    background-position: bottom;
+    .overlay {
+        background: $mainColor;
+        opacity: 0.7;
+    }
+    .info {
+        h3 {
+            color: #fff;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 35px;
+            margin: 0;
+            @media(max-width: 575.98px) {
+                font-size: 25px;
+            }
+        }
+        a {
+            position: relative;
+            color: #C4C4C4;
+            font-size: 35px;
+            font-weight: 600;
+            &:after {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                bottom: -10px;
+                height: 1px;
+                background: currentColor;
+                width: 0;
+                transition: 0.3s;
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+            @media(max-width:575.98px) {
+                font-size: 25px;
+            }
+        }
+        .divider {
+            color: #C4C4C4;
+            margin: 0 16px;
+            font-size: 27px;
+            @media(max-width: 575.98px) {
+                font-size: 19px;
+            }
+        }
+        .current {
+            position: relative;
+            color: #C4C4C4;
+            font-size: 35px;
+            font-weight: 600;
+            @media(max-width: 575.98px) {
+                font-size: 25px;
+            }
+        }
+        @media(max-width:575.98px) {
+            line-height: 40px;
+        }
+    }
+}
+
+@media(max-width:767.98px) {
+    .page-tittle {
+        height: 300px;
+    }
+}
 
 
-/*--------------------------------------------------------------
-# End Page Header
---------------------------------------------------------------*/
+/*End page header*/
