@@ -288,6 +288,9 @@
         z-index: -0001;
     }
     .image {
+        -webkit-mask-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTY2IDEyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTY2IDEyOTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6IzIzMUYyMDt9DQo8L3N0eWxlPg0KPHBhdGggaWQ9IlNoYXBlIiBjbGFzcz0ic3QwIiBkPSJNNzAuOCwxNUM2My45LDEwLjUsNTcuNyw0LjgsNTAuMSwxLjhjLTE3LTYuNS0zOC40LDUuMi00MiwyM0M1LjYsMzYuNSwxMiw0My4xLDguOSw1OQ0KCWMtMS4yLDYtOCwxMC04LjgsMTYuNGMtMS40LDEwLjksOS4zLDE3LjcsMjAsMjBjMTAuNywyLjMsMjIuMSwwLjgsMzIuNiw0YzkuNiwzLDE3LjUsOS43LDI1LjQsMTZjNy45LDYuMiwxNi42LDEyLjMsMjYuNiwxMy40DQoJYzEwLDEuMiwyMS40LTQuMywyMy42LTE0LjJjMS4xLTUuMi0wLjQtMTAuOSwxLjgtMTUuOGMzLjMtNy40LDEyLjgtOC45LDIwLjctMTAuN2M3LjktMS44LDE3LTcuNywxNS4xLTE1LjYNCgljLTIuMy05LjQtMTcuMS05LjEtMjIuMi0xNy4zYy0zLjYtNS44LTEuMS0xMy40LTIuNS0yMC4xYy0xLjgtOC4yLTkuNy0xNC0xNy45LTE1LjhDMTA0LjIsMTUuMyw4OC44LDI2LjYsNzAuOCwxNXoiLz4NCjwvc3ZnPg0K);
+        -webkit-mask-size: 100% 100%;
+        -webkit-mask-repeat: no-repeat;
         img {
             width: 100%;
             border-radius: 10px;
@@ -535,7 +538,7 @@
             padding: 20px;
         }
         .main-item {
-            padding: 35px 22px;
+            padding: 45px;
             background: #fff;
             box-shadow: 0px 6px 20px rgb(0 0 0 / 10%);
             border-radius: 12px;
@@ -578,6 +581,7 @@
 
 @media(max-width:767.98px) {
     .Companies_section .owl-carousel .main-item {
+        padding: 30px;
         .info p {
             display: -webkit-box;
             -webkit-line-clamp: 5;
@@ -711,7 +715,8 @@
     .services_section .box {
         text-align: center;
         .icon:after {
-            right: 44%;
+            right: 44% !important;
+            left: auto !important;
         }
     }
 }

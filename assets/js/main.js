@@ -123,25 +123,25 @@ $(document).ready(function() {
             $('.up').removeClass('fade')
         }
 
-        if ($(window).scrollTop() >= 137) {
+        // if ($(window).scrollTop() >= 137) {
 
-            $('.nav_bar').addClass('sticky_nav')
+        //     $('.nav_bar').addClass('sticky_nav')
 
-        } else {
+        // } else {
 
-            $('.nav_bar').removeClass('sticky_nav')
+        //     $('.nav_bar').removeClass('sticky_nav')
 
-        }
+        // }
 
-        if ($(window).scrollTop() >= 170) {
+        // if ($(window).scrollTop() >= 170) {
 
-            $('.sticky_nav .vission').addClass('active')
+        //     $('.sticky_nav .vission').show()
 
-        } else {
+        // } else {
 
-            $('.sticky_nav .vission').removeClass('active')
+        //     $('.sticky_nav .vission').hide()
 
-        }
+        // }
     })
 
 
@@ -152,29 +152,21 @@ $(document).ready(function() {
         }, 1000, 'easeInOutExpo')
     })
 
-    if ($(window).scrollTop() >= 137) {
-
-        $('.nav_bar').addClass('sticky_nav')
-
-    } else {
-
-        $('.nav_bar').removeClass('sticky_nav')
-
-    }
-
-    if ($(window).scrollTop() >= 170) {
-
-        $('.sticky_nav .vission').addClass('active')
-
-    } else {
-
-        $('.sticky_nav .vission').removeClass('active')
-
-    }
-
 
     /* ===============================  dropdown  =============================== */
 
     $('.dropdown-toggle').dropdown()
+
+});
+
+
+
+window.addEventListener('scroll', function() {
+    var top = document.documentElement.scrollTop,
+        nav_bar = document.getElementById('nav_bar'),
+        vission_logo = document.getElementById('vission_logo');
+
+    top > 137 ? nav_bar.classList.add('sticky_nav') : nav_bar.classList.remove('sticky_nav');
+    top > 170 ? vission_logo.classList.add('active') : vission_logo.classList.remove('active');
 
 });

@@ -1,19 +1,5 @@
 /*Start page header*/
 
-.page-tittle-contact {
-    .display-table {
-        text-align: start;
-        .info {
-            p {
-                color: #fff;
-                font-size: 20px;
-                margin-top: 10px;
-                font-weight: 500;
-            }
-        }
-    }
-}
-
 .et_pb_bottom_inside_divider {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyMHZ3IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTAgOTAuNzJsMTQwLTI4LjI4IDMxNS41MiAyNC4xNEw3OTYuNDggNjUuOCAxMTQwIDEwNC44OWwxNDAtMTQuMTdWMEgwdjkwLjcyeiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0wIDB2NDcuNDRMMTcwIDBsNjI2LjQ4IDk0Ljg5TDExMTAgODcuMTFsMTcwLTM5LjY3VjBIMHoiLz48L2c+PC9zdmc+);
     background-size: 200% 20vw;
@@ -40,6 +26,23 @@
     .overlay {
         background: $mainColor;
         opacity: 0.7;
+    }
+    &.page-tittle-contact {
+        background-image: linear-gradient( 42deg, rgb(40 61 75 / 70%) 59%, rgba(255 255 255 /86%) 100%), url(../img/page_header.jpg) !important;
+        .et_pb_bottom_inside_divider {
+            background-image: url(../img/header_contact.svg);
+        }
+    }
+    .display-table {
+        text-align: start;
+        .info {
+            p {
+                color: #fff;
+                font-size: 20px;
+                margin-top: 10px;
+                font-weight: 500;
+            }
+        }
     }
     .info {
         h3 {

@@ -1,0 +1,140 @@
+/*--------------------------------------------------------------
+# Start Contact page
+--------------------------------------------------------------*/
+
+.contact_page {
+    padding: 100px 0;
+    &:after {
+        position: absolute;
+        content: "";
+        width: 500px;
+        height: 129%;
+        background: #146e99;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        clip-path: polygon(100% 52%, 0 0, 0 100%);
+        z-index: -1;
+        @media(max-width: 575.98px) {
+            display: none;
+        }
+    }
+    .modal_contact {
+        width: 80%;
+        margin: 0 auto;
+        background: #fff;
+        box-shadow: 0px 5px 12px rgb(0 0 0 / 10%);
+        padding: 60px;
+        .head {
+            margin-bottom: 30px;
+            h2 {
+                color: $mainColor;
+                text-transform: capitalize;
+                font-weight: 700;
+                font-size: 37px;
+            }
+            p {
+                color: #C9D3DA;
+                font-size: 17px;
+                &::first-letter {
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .form-control {
+            background: #F9F9FB;
+            border: 0;
+            height: 60px;
+            padding: 20px;
+            border-radius: 14px;
+            outline: none;
+            &::placeholder {
+                color: #DDE0E3;
+                text-transform: capitalize;
+            }
+            &:hover,
+            &:focus {
+                box-shadow: 0 0 0 0.2rem rgba($color: $mainColor, $alpha: 0.3);
+            }
+        }
+        textarea {
+            height: 150px !important;
+            resize: none;
+        }
+        .main-btn {
+            box-shadow: 0px 3px 6px rgba($color: $mainColor, $alpha: 0.6);
+            width: 150px;
+            border: 0;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin-top: 15px;
+            padding: 10px;
+        }
+        .info_card {
+            height: 100%;
+            background-color: $mainColor;
+            position: relative;
+            right: -70%;
+            width: 155%;
+            box-shadow: 0px 5px 20px rgba($color: $mainColor, $alpha: .5);
+            padding: 50px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            .title {
+                text-transform: capitalize;
+                font-weight: 700;
+            }
+            .info {
+                margin-top: 40px;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    color: #fff;
+                    .icon {
+                        margin-inline-end: 25px;
+                        font-size: 19px;
+                        width: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    &:hover {
+                        color: $thirdColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991.98px) {
+    .contact_page .modal_contact {
+        width: 100%;
+        .info_card {
+            height: auto;
+            position: unset;
+            width: auto;
+            display: block;
+            margin-top: 30px;
+        }
+        .o-2 {
+            order: 2;
+        }
+    }
+}
+
+@media(max-width:575.98px) {
+    .contact_page .modal_contact {
+        padding: 30px;
+        .info_card {
+            padding: 30px;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End Contact page
+--------------------------------------------------------------*/
