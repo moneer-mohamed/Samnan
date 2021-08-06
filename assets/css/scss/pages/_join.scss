@@ -1,0 +1,85 @@
+/*--------------------------------------------------------------
+# Start join page
+--------------------------------------------------------------*/
+
+.join_page {
+    padding: 100px 0px 70px;
+    .process-block-one {
+        position: relative;
+        .inner-box {
+            position: relative;
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 40px 30px;
+            background: #fff;
+            border-radius: 6px;
+            -webkit-box-shadow: rgb(0 0 0 / 20%) 0px 0px 50px 0px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0;
+            .icon {
+                position: relative;
+                margin-bottom: 30px;
+                line-height: 125px;
+                img {
+                    width: 120px;
+                }
+            }
+            h5 {
+                position: relative;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                display: inline-block;
+                margin-bottom: 25px;
+                color: $thirdColor;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: -105px;
+                    top: 6px;
+                    background: #dcdfe3;
+                    width: 75px;
+                    height: 1px;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    right: -105px;
+                    top: 6px;
+                    background: #dcdfe3;
+                    width: 75px;
+                    height: 1px;
+                }
+                .count {
+                    font-size: 18px;
+                    margin-right: 5px;
+                }
+            }
+            h4 {
+                position: relative;
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 8px;
+                color: $mainColor;
+            }
+            .text {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.pattern {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+
+/*--------------------------------------------------------------
+# End join page
+--------------------------------------------------------------*/

@@ -76,6 +76,10 @@ a {
     margin-top: 30px;
 }
 
+.mb-40 {
+    margin-bottom: 40px;
+}
+
 section {
     overflow: hidden;
     position: relative;
@@ -120,28 +124,6 @@ section {
     vertical-align: middle;
 }
 
-.num-page {
-    margin-top: 20px;
-    a {
-        display: inline-flex;
-        width: 35px;
-        height: 35px;
-        border: 2px solid #fff;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        color: #fff;
-        font-weight: 900;
-        margin: 0 5px;
-        transition: .3s;
-        &.active,
-        &:hover {
-            background-color: #fff;
-            color: $pColor;
-        }
-    }
-}
-
 input {
     &::placeholder {
         color: #7A7F80;
@@ -165,6 +147,34 @@ input {
     resize: none;
     &::placeholder {
         color: rgba($color: #7A7F80, $alpha: 0.31);
+    }
+}
+
+.pagination_custom {
+    text-align: center;
+    display: flex;
+    ul {
+        margin: auto;
+        li {
+            float: left;
+            margin: 0 5px;
+            a {
+                width: 40px;
+                height: 40px;
+                border-radius: 2px;
+                background-color: #f5f5f5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.active,
+            &:hover {
+                a {
+                    background-color: #0397FB;
+                    color: #fff;
+                }
+            }
+        }
     }
 }
 

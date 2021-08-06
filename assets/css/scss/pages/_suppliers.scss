@@ -1,0 +1,138 @@
+/*--------------------------------------------------------------
+# Start Suppliers page
+--------------------------------------------------------------*/
+
+.suppliers_page {
+    padding: 60px 0 0;
+    .main-heading {
+        p {
+            width: 70%;
+            margin: 0 auto;
+            font-size: 17px;
+        }
+    }
+    .info {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .block:not(:last-of-type) {
+            margin-bottom: 45px;
+        }
+        h4 {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            color: $mainColor;
+            display: inline-block;
+            font-weight: 700;
+            &:after {
+                position: absolute;
+                content: "";
+                bottom: 50%;
+                left: -45px;
+                background-color: #0E0E0E;
+                width: 35px;
+                height: 2px;
+            }
+        }
+        p {
+            line-height: 27px;
+            font-size: 14px;
+        }
+    }
+    .image {
+        position: relative;
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: $thirdColor;
+            z-index: -1;
+            @media(max-width: 575.98px) {
+                display: none;
+            }
+        }
+        &:after {
+            top: -20px;
+            left: -20px;
+        }
+        &:before {
+            bottom: -20px;
+            right: -20px;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    ul {
+        list-style-type: disc;
+        padding-inline-start: 20px;
+        li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            &::marker {
+                content: "⦾ ";
+                margin-inline-end: 10px;
+                color: $mainColor;
+            }
+        }
+    }
+    .image-text {
+        background-image: url(../img/bg-5.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 50px 0;
+        padding: 70px 0;
+        &.two {
+            background-image: url(../img/bg_6.jpg);
+            margin-bottom: 0;
+        }
+        .image-text-heading {
+            h2 {
+                color: #fff;
+                font-weight: 900;
+                margin-bottom: 20px;
+                span {
+                    color: $mainColor
+                }
+            }
+            p {
+                color: #ccc;
+                margin: 0 0 25px;
+            }
+        }
+        &.two {}
+    }
+}
+
+@media(max-width:991.98px) {
+    .suppliers_page {
+        .info {
+            margin-bottom: 30px;
+        }
+        .o-2 {
+            order: 2;
+            margin-top: 30px;
+        }
+        .main-heading p {
+            width: 100%;
+            margin: 0 auto;
+            font-size: 17px;
+        }
+    }
+}
+
+@media(max-width:575.98px) {
+    .suppliers_page .info {
+        font-size: 15px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End Suppliers page
+--------------------------------------------------------------*/

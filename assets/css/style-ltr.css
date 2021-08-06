@@ -63,6 +63,26 @@ body {
     transform: translateY(-50%) scaleX(-1);
 }
 
+.suppliers_page .info h4:after {
+    right: -45px;
+    left: auto;
+}
+
+.suppliers_page .image:before {
+    left: -20px;
+    right: auto;
+}
+
+.suppliers_page .image:after {
+    right: -20px;
+    left: auto;
+}
+
+.blogs_page .inner-box .lower-content .read-more-link:before {
+    left: 0;
+    right: auto;
+}
+
 
 /*--------------------------------------------------------------
 # End Global Page
