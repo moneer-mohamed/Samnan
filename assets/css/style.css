@@ -2042,6 +2042,399 @@ select:focus {
 /*--------------------------------------------------------------
 # End join page
 --------------------------------------------------------------*/
+.companies_page {
+  padding: 80px 0;
+}
+.companies_page .companies_logo {
+  border-inline-end: 2px solid #eee;
+  height: 100%;
+  padding-inline-end: 15px;
+}
+.companies_page .companies_logo .item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.companies_page .companies_logo .item img {
+  max-width: 100%;
+  width: 250px;
+}
+.companies_page .companies_logo .item.active img {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+.companies_page .info_company .info_content .box_content {
+  display: none;
+  transition: 0.3s;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+.companies_page .info_company .info_content .box_content.active {
+  display: block;
+  animation: fadeInUp 1s both;
+  -webkit-animation: fadeInUp 1s both;
+}
+.companies_page .info_company .image img {
+  border-radius: 6px;
+  max-width: 100%;
+}
+.companies_page .info_company .name {
+  font-size: 28px;
+  margin: 20px 0;
+}
+.companies_page .info_company .logo {
+  display: block;
+  margin: 20px auto;
+}
+.companies_page .info_company .logo img {
+  max-width: 100%;
+}
+.companies_page .info_company .desc {
+  margin: 30px 0;
+}
+.companies_page .info_company .our_services .content {
+  margin-top: 20px;
+}
+.companies_page .info_company .our_services .content .text {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #146e99;
+  display: inline-block;
+  font-weight: 700;
+}
+.companies_page .info_company .our_services .content ul {
+  list-style-type: disc;
+  padding-inline-start: 20px;
+}
+.companies_page .info_company .our_services .content ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.companies_page .info_company .our_services .content ul li::marker {
+  content: "⦾ ";
+  margin-inline-end: 10px;
+  color: #146e99;
+}
+
+@media (max-width: 767.98px) {
+  .companies_page .companies_logo {
+    display: flex;
+    border: 0;
+    flex-wrap: wrap;
+  }
+  .companies_page .companies_logo .item {
+    flex: 33.333%;
+    max-width: 33.333%;
+  }
+}
+@media (max-width: 575.98px) {
+  .companies_page .companies_logo .item {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/*--------------------------------------------------------------
+# Start Job Pages
+--------------------------------------------------------------*/
+.jobs_page {
+  padding: 80px 0;
+}
+.jobs_page .job_listings .job_filters {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+.jobs_page .job_listings .job_filters .search_jobs {
+  margin-inline-end: 15px;
+  width: 30%;
+}
+.jobs_page .job_listings .job_filters .search_jobs input {
+  outline: none;
+  box-shadow: none;
+}
+.jobs_page .job_listings .job_filters .main-btn {
+  border: 0;
+}
+.jobs_page .job_listings .jobs_content {
+  margin-top: 30px;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing {
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing:nth-of-type(even) {
+  background: #f2f2f2;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing:hover {
+  background: #ddd;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 1em 1em 2em;
+  border: 0;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.5em;
+  text-decoration: none;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing .details {
+  display: flex;
+  align-items: center;
+  flex: 55%;
+  max-width: 55%;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing .company_logo {
+  width: 42px;
+  height: 42px;
+  margin-inline-end: 1em;
+  vertical-align: middle;
+  box-shadow: none;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing .position h3 {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: 700;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing .position .company {
+  color: #999;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing .location {
+  flex: 25%;
+  max-width: 25%;
+  color: #999;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing .meta {
+  width: 20%;
+  color: #999;
+  text-align: end;
+}
+.jobs_page .job_listings .jobs_content .type-job_listing .meta .job-type {
+  font-weight: 700;
+}
+.jobs_page .part-time {
+  color: #f08d3c;
+}
+.jobs_page .full-time {
+  color: #90da36;
+}
+.jobs_page .internship {
+  color: #6033cc;
+}
+
+.single_job_page .info_job {
+  position: relative;
+  box-shadow: 0 0 32px 0 rgba(26, 47, 106, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.single_job_page .info_job .inner {
+  padding: 15px 30px;
+  word-wrap: break-word;
+}
+.single_job_page .info_job .inner .meta {
+  list-style: none outside;
+  padding: 0;
+  margin: 20px 0;
+  overflow: hidden;
+  clear: both;
+}
+.single_job_page .info_job .inner .meta .full-time {
+  background-color: #90da36;
+}
+.single_job_page .info_job .inner .meta .job-type {
+  color: #fff;
+}
+.single_job_page .info_job .inner .meta li {
+  margin-inline-end: 15px;
+  padding: 0.5em;
+  display: inline-block;
+  line-height: 1em;
+  color: #999;
+}
+.single_job_page .info_job .inner .meta li i {
+  margin-inline-end: 6px;
+}
+.single_job_page .info_job .inner .company {
+  position: relative;
+  border: 1px solid #eee;
+  padding: 1em;
+  margin: 0 0 2em;
+  display: block;
+  clear: both;
+  min-height: 3em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+}
+.single_job_page .info_job .inner .company img {
+  width: 3em;
+  height: 3em;
+  vertical-align: middle;
+  box-shadow: none;
+  margin-inline-end: 10px;
+}
+.single_job_page .info_job .inner .company .name {
+  margin-inline-end: 3em;
+  padding-inline-end: 1em;
+  line-height: 1.5em;
+  margin: 0;
+}
+.single_job_page .info_job .inner .main-btn {
+  text-transform: uppercase;
+  font-size: 19px;
+  padding: 10px 50px;
+}
+
+.side_left .widget {
+  padding-inline-start: 15px;
+  margin-bottom: 30px;
+}
+.side_left .widget .widget-title {
+  margin-bottom: 35px;
+  position: relative;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  position: relative;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: #0c121d;
+  text-transform: none;
+  font-weight: 800;
+  font-style: normal;
+}
+.side_left .widget .widget-title:after {
+  display: block;
+  height: 2px;
+  margin-top: 0;
+  margin-bottom: -2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  width: 50px;
+  background-color: #146e99;
+}
+.side_left .widget li {
+  padding: 0 0 15px 0;
+  display: flex !important;
+  align-items: normal;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.side_left .widget li a {
+  margin-inline-end: 15px;
+  font-weight: 700;
+  color: #0c121d;
+}
+.side_left .widget li a img {
+  width: 75px;
+  height: 75px;
+}
+.side_left .widget .cspt-rpw-date {
+  line-height: 17px;
+  display: block;
+  color: #54b5e2;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.side_left .widget .cspt-rpw-date a {
+  color: #54b5e2;
+}
+.side_left .search-form {
+  position: relative;
+}
+.side_left .search-form input[type=search] {
+  height: 58px;
+  line-height: 58px;
+  border: 1px solid #ececec;
+  background-color: #fff;
+  padding-inline-end: 90px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #848484;
+  padding: 0 15px;
+  font-weight: 400;
+  background: #eff2f7;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+.side_left .search-form button {
+  position: absolute;
+  left: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: #146e99;
+  top: 50%;
+  height: 58px;
+  line-height: 58px;
+  margin-top: -29px;
+  color: #fff;
+  font-size: 16px;
+  z-index: 1;
+  width: 70px;
+  border-radius: 6px;
+}
+
+/*--------------------------------------------------------------
+# End Job Pages
+--------------------------------------------------------------*/
+@media (max-width: 991.98px) {
+  .jobs_page .job_listings .job_filters .search_jobs {
+    width: 100%;
+  }
+
+  .single_job_page .info_job {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .jobs_page .job_listings .jobs_content .type-job_listing a {
+    display: block;
+    text-align: center;
+  }
+  .jobs_page .job_listings .jobs_content .type-job_listing a .details {
+    display: block;
+    flex: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .jobs_page .job_listings .jobs_content .type-job_listing a .details .company_logo {
+    margin-inline-end: 0;
+    margin-bottom: 10px;
+  }
+  .jobs_page .job_listings .jobs_content .type-job_listing a .location {
+    flex: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .jobs_page .job_listings .jobs_content .type-job_listing a .meta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .single_job_page .info_job .inner .meta li {
+    display: table;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 575.98px) {
+  .single_job_page .info_job .inner {
+    padding: 15px;
+  }
+}
 /*--------------------------------------------------------------
 # Start footer top
 --------------------------------------------------------------*/

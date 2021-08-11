@@ -69,7 +69,16 @@ $(document).ready(function() {
         }, 1000, 'easeInOutExpo')
     })
 
+    /* =============================== Settings of content tabs =============================== */
+    $('.companies_logo .item').on('click', function() {
 
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var id = $(this).attr('data-content')
+
+        $('.info_company .info_content .box_content[id="' + id + '"]').addClass('active').siblings().removeClass('active')
+
+    })
 
 
     /* ===============================  WOW.js  =============================== */

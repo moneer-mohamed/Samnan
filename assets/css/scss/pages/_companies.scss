@@ -1,0 +1,101 @@
+.companies_page {
+    padding: 80px 0;
+    .companies_logo {
+        border-inline-end: 2px solid #eee;
+        height: 100%;
+        padding-inline-end: 15px;
+        .item {
+            margin-bottom: 20px;
+            cursor: pointer;
+            img {
+                max-width: 100%;
+                width: 250px;
+            }
+            &.active {
+                img {
+                    box-shadow: 0px 6px 12px rgb(0 0 0 / 20%);
+                }
+            }
+        }
+    }
+    .info_company {
+        .info_content {
+            .box_content {
+                display: none;
+                transition: .3s;
+                @include start_FadeInUp;
+                &.active {
+                    display: block;
+                    @include animation_FadeInUp;
+                }
+            }
+        }
+        .image {
+            img {
+                border-radius: 6px;
+                max-width: 100%;
+            }
+        }
+        .name {
+            font-size: 28px;
+            margin: 20px 0;
+        }
+        .logo {
+            display: block;
+            margin: 20px auto;
+            img {
+                max-width: 100%;
+            }
+        }
+        .desc {
+            margin: 30px 0;
+        }
+        .our_services {
+            .content {
+                margin-top: 20px;
+                .text {
+                    position: relative;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    color: #146e99;
+                    display: inline-block;
+                    font-weight: 700;
+                }
+                ul {
+                    list-style-type: disc;
+                    padding-inline-start: 20px;
+                    li {
+                        margin-bottom: 10px;
+                        font-size: 15px;
+                        &::marker {
+                            content: "⦾ ";
+                            margin-inline-end: 10px;
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:767.98px) {
+    .companies_page .companies_logo {
+        display: flex;
+        border: 0;
+        flex-wrap: wrap;
+        .item {
+            flex: 33.333%;
+            max-width: 33.333%;
+        }
+    }
+}
+
+@media(max-width:575.98px) {
+    .companies_page .companies_logo {
+        .item {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+}
