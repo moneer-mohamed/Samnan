@@ -79,6 +79,62 @@
     background-repeat: no-repeat;
 }
 
+.opportunities_section {
+    padding: 50px 0;
+    .box {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid $thirdColor;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+        box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+        .head {
+            background: $mainColor;
+            padding: 10px 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h3 {
+                margin: 0px;
+                display: inline;
+                color: #fff;
+                font-size: 15px;
+            }
+            .dept {
+                font-style: italic;
+                color: #fff;
+                font-size: 13px;
+            }
+        }
+        .inner {
+            padding: 15px;
+            p {
+                font-size: 15px;
+                line-height: 28px;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+            a.more {
+                display: block;
+                color: #da6b29;
+                font-weight: 600;
+            }
+            span {
+                display: block;
+            }
+            .main-btn {
+                display: table;
+                margin-right: auto;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
 
 /*--------------------------------------------------------------
 # End join page

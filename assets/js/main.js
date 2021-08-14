@@ -80,6 +80,13 @@ $(document).ready(function() {
 
     })
 
+    /* =============================== datepicker =============================== */
+
+    $('.date_picker').datepicker({
+        'format': 'm/d/yyyy',
+        'autoclose': true
+    });
+
 
     /* ===============================  WOW.js  =============================== */
 
@@ -165,6 +172,49 @@ $(document).ready(function() {
     /* ===============================  dropdown  =============================== */
 
     $('.dropdown-toggle').dropdown()
+
+    /* =============================== nice select =============================== */
+    $('.nice-select').niceSelect();
+
+    /* =============================== input radio =============================== */
+
+    $('input:radio[name="experience"]').change(
+
+        function() {
+
+            if (this.checked && this.value == 'no') {
+                console.log('no');
+                $('#experience_row').hide();
+            } else if (this.checked && this.value == 'yes') {
+                console.log('yes');
+                $('#experience_row').show();
+            }
+        }
+    );
+
+    $('#add_exep').on('click', function() {
+        $('.ex_table').append(`
+        <div class="row ex-border">
+            <div class="col-lg-3">
+                <label for="">Date From</label>
+                <input type="text" class="date_picker">
+            </div>
+            <div class="col-lg-3">
+                <label for="">Date To</label>
+                <input type="text" class="date_picker">
+            </div>
+            <div class="col-lg-3">
+                <label for="">Job Title</label>
+                <input type="text">
+            </div>
+            <div class="col-lg-3">
+                <label for="">	Employer / Company</label>
+                <input type="text">
+            </div>
+        </div>
+        `)
+    })
+
 
 });
 
